@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true })); // Serve para acessar os dados 
 // Atenção: usamos "views" (plural) e path.join para evitar duplicar o caminho "src"
 app.set('views', path.join(__dirname, 'view'));  // app.set('views', './src/view'); para passar o caminho mais pode dar alguns poblemas
 app.set('view engine', 'ejs');
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(router);
 
 app.listen(port, () => {

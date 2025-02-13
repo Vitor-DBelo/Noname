@@ -5,17 +5,30 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon  src/server.js"
+    "start": "nodemon src/server.js --ignore public --ignore frontEnd",
+    "dev": "webpack -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "core-js": "^3.40.0",
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "regenerator-runtime": "^0.14.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "nodemon": "^3.1.9",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.2"
   }
 }
